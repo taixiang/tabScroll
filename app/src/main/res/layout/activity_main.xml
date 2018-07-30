@@ -5,30 +5,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/scroll"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/colorPrimary"
-        app:tabMode="scrollable"
-        app:tabSelectedTextColor="@color/colorPrimary" />
+        android:layout_margin="10dp"
+        android:text="tablayout+scrollview"
+        android:textAllCaps="false" />
 
-    <com.tabscroll.CustomScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:fitsSystemWindows="true">
-
-        <LinearLayout
-            android:id="@+id/container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-        </LinearLayout>
-
-    </com.tabscroll.CustomScrollView>
-
+    <Button
+        android:id="@+id/recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="tablayout+recycler"
+        android:textAllCaps="false" />
 </LinearLayout>
