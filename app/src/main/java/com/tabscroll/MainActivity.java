@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btnScroll;
     private Button btnRecycler;
+    private Button btnSticky;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -22,8 +23,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnScroll = findViewById(R.id.scroll);
         btnRecycler = findViewById(R.id.recycler);
+        btnSticky = findViewById(R.id.sticky);
         btnScroll.setOnClickListener(this);
         btnRecycler.setOnClickListener(this);
+        btnSticky.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.recycler:
                 Intent intent2 = new Intent(this, TabRecyclerActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.sticky:
+                Intent intent3 = new Intent(this, StickyActivity.class);
+                startActivity(intent3);
                 break;
             default:
                 break;

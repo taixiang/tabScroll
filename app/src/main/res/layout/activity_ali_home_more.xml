@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.tabscroll.CustomScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#ccc"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="这里是顶部内容区域"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!--占位的tablayout-->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tablayout_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="#ffffff"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp" />
+
+            </LinearLayout>
+
+
+            <!--实际用户操作的tablayout-->
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout_real"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#ffffff"
+                android:visibility="invisible"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/colorPrimary" />
+        </FrameLayout>
+
+
+    </com.tabscroll.CustomScrollView>
+
+</LinearLayout>
